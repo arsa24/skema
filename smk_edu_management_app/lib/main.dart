@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smk_edu_management_app/components/navbar_component.dart';
+import 'package:smk_edu_management_app/constant/constant.dart';
+import 'package:smk_edu_management_app/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +16,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Skema',
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        textTheme: GoogleFonts.interTextTheme()
+        brightness: Brightness.light,
+        textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const NavbarComponent(),
+      darkTheme: ThemeData(
+        textTheme: GoogleFonts.interTextTheme(),
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Constant().primary,
+        appBarTheme: AppBarTheme(color: Constant().primary),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Constant().primary
+        )
+      ),
+      home: OnboardingScreen(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:smk_edu_management_app/screens/home_screen.dart';
 import 'package:smk_edu_management_app/screens/learning_screen.dart';
 import 'package:smk_edu_management_app/screens/profile_screen.dart';
@@ -34,42 +35,51 @@ class _NavbarComponentState extends State<NavbarComponent> {
             _index = v;
           });
         },
+        selectedLabelStyle: GoogleFonts.inter(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+        ),
+        unselectedLabelStyle: GoogleFonts.inter(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          color: Color(0xFF585F67),
+        ),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: SvgPicture(
               AssetBytesLoader("assets/vector/house.vec"),
-            ),
-            activeIcon:   SvgPicture(
-              AssetBytesLoader("assets/vector/house_active.vec"),
+              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
             ),
             label: "Home",
+            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/house.vec")),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture(
               AssetBytesLoader("assets/vector/check.vec"),
-            ),
-            activeIcon: SvgPicture(
-              AssetBytesLoader("assets/vector/check_active.vec"),
+              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
             ),
             label: "Task",
+            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/check.vec")),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture(
-             AssetBytesLoader("assets/vector/learning.vec"),
-            ),
-            activeIcon: SvgPicture(
-             AssetBytesLoader("assets/vector/learning_active.vec"),
+              AssetBytesLoader("assets/vector/learning.vec"),
+              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
             ),
             label: "Learning",
+            activeIcon: SvgPicture(
+              AssetBytesLoader("assets/vector/learning.vec"),
+            ),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture(
-              AssetBytesLoader("assets/vector/user.vec")
-            ),
-            activeIcon: SvgPicture(
-              AssetBytesLoader("assets/vector/user_active.vec")
+              AssetBytesLoader("assets/vector/user.vec"),
+              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
             ),
             label: "Profile",
+            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/user.vec")),
           ),
         ],
       ),
