@@ -23,6 +23,10 @@ Aplikasi manajemen tugas untuk siswa dan guru di SMK. Aplikasi ini membantu dala
 - Backend: [Node.js](https://nodejs.org) (WIP)
 - Database: [MySQL](https://dev.mysql.com/) (WIP)
 
+## Download
+
+Anda bisa mengunduh aplikasi ini di page [releases](https://github.com/arsa24/skema/releases)
+
 ## Kontribusi
 
 Kami menerima kontribusi untuk pengembangan aplikasi ini. Silakan buat pull request atau laporkan masalah di [issues](https://github.com/arsa24/SKEMA/issues).
