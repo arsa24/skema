@@ -4,6 +4,7 @@ import 'package:smk_edu_management_app/screens/home_screen.dart';
 import 'package:smk_edu_management_app/screens/learning_screen.dart';
 import 'package:smk_edu_management_app/screens/profile_screen.dart';
 import 'package:smk_edu_management_app/screens/task_screen.dart';
+import "package:vector_graphics/vector_graphics.dart";
 
 class NavbarComponent extends StatefulWidget {
   const NavbarComponent({super.key});
@@ -26,6 +27,7 @@ class _NavbarComponentState extends State<NavbarComponent> {
     return Scaffold(
       body: IndexedStack(index: _index, children: _screens),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _index,
         onTap: (v) {
           setState(() {
@@ -34,42 +36,38 @@ class _NavbarComponentState extends State<NavbarComponent> {
         },
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/house.svg",
-              colorFilter: const ColorFilter.mode(
-                Colors.white,
-                BlendMode.color,
-              ),
+            icon: SvgPicture(
+              AssetBytesLoader("assets/vector/house.vec"),
+            ),
+            activeIcon:   SvgPicture(
+              AssetBytesLoader("assets/vector/house_active.vec"),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/check.svg",
-              colorFilter: const ColorFilter.mode(
-                Colors.white,
-                BlendMode.color,
-              ),
+            icon: SvgPicture(
+              AssetBytesLoader("assets/vector/check.vec"),
+            ),
+            activeIcon: SvgPicture(
+              AssetBytesLoader("assets/vector/check_active.vec"),
             ),
             label: "Task",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/learning.svg",
-              colorFilter: const ColorFilter.mode(
-                Colors.white,
-                BlendMode.color,
-              ),
+            icon: SvgPicture(
+             AssetBytesLoader("assets/vector/learning.vec"),
+            ),
+            activeIcon: SvgPicture(
+             AssetBytesLoader("assets/vector/learning_active.vec"),
             ),
             label: "Learning",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/icons/circle-user-round.svg",
-              colorFilter: const ColorFilter.mode(
-                Colors.white,
-                BlendMode.color,
-              ),
+            icon: SvgPicture(
+              AssetBytesLoader("assets/vector/user.vec")
+            ),
+            activeIcon: SvgPicture(
+              AssetBytesLoader("assets/vector/user_active.vec")
             ),
             label: "Profile",
           ),
