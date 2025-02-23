@@ -2,11 +2,12 @@ import 'package:gap/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smk_edu_management_app/components/custom_onboarding.dart';
-import 'package:smk_edu_management_app/components/navbar_component.dart';
 import 'package:smk_edu_management_app/constant/constant.dart';
+import 'package:smk_edu_management_app/screens/login_screen.dart';
+import 'package:smk_edu_management_app/screens/register_screen.dart';
 
-class SignupOrSignin extends StatelessWidget {
-  const SignupOrSignin({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +24,8 @@ class SignupOrSignin extends StatelessWidget {
             padding: const EdgeInsets.only(right: 24.0, left: 24, bottom: 30),
             child: GestureDetector(
               onTap: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => NavbarComponent()),
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => RegisterScreen()),
                 );
               },
               child: Container(
@@ -48,8 +49,8 @@ class SignupOrSignin extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => NavbarComponent()),
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => LoginScreen()),
               );
             },
             child: Text(

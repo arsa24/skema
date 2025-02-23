@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smk_edu_management_app/components/navbar_component.dart';
 import 'package:smk_edu_management_app/constant/constant.dart';
 import 'package:smk_edu_management_app/screens/onboarding_screen.dart';
 
@@ -22,6 +21,12 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(),
       ),
       darkTheme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+          fillColor: Constant().secondary,
+          filled: true,
+          focusColor: Constant().grayColor,
+          hoverColor: Constant().grayColor,
+        ),
         textTheme: GoogleFonts.interTextTheme(),
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Constant().primary,

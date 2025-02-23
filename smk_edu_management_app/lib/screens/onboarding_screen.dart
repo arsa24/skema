@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smk_edu_management_app/components/custom_onboarding.dart';
+import 'package:smk_edu_management_app/components/page_route_animation.dart';
 import 'package:smk_edu_management_app/constant/constant.dart';
 import "package:google_fonts/google_fonts.dart";
-import 'package:smk_edu_management_app/screens/signup_or_signin.dart';
+import 'package:smk_edu_management_app/screens/welcome_screen.dart';
 import "package:gap/gap.dart";
 
 class OnboardingScreen extends StatefulWidget {
@@ -55,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               AnimatedContainer(
                 curve: Curves.easeInOut,
-                duration: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 400),
                 width: _index == 0 ? 16 : 6,
                 height: 6,
                 decoration: BoxDecoration(
@@ -65,7 +66,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               AnimatedContainer(
                 curve: Curves.easeInOut,
-                duration: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 400),
                 width: _index == 1 ? 16 : 6,
                 height: 6,
                 decoration: BoxDecoration(
@@ -74,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               AnimatedContainer(
-                duration: Duration(milliseconds: 300),
+                duration: Duration(milliseconds: 400),
                 curve: Curves.easeInOut,
                 width: _index == 2 ? 16 : 6,
                 height: 6,
@@ -92,12 +93,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               onTap: () {
                 if (_index != _content.length - 1) {
                   _controller.nextPage(
-                    duration: Duration(milliseconds: 300),
+                    duration: Duration(milliseconds: 400),
                     curve: Curves.easeInOut,
                   );
                 } else {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => SignupOrSignin()),
+                    createRouteAnimation(WelcomeScreen(), Curves.ease, Offset(0, 1), Offset.zero)
                   );
                 }
               },

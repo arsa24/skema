@@ -16,7 +16,7 @@ class NavbarComponent extends StatefulWidget {
 
 class _NavbarComponentState extends State<NavbarComponent> {
   int _index = 0;
-  final List<Widget> _screens = [
+  final List<Widget> _screens = <Widget>[
     HomeScreen(),
     TaskScreen(),
     LearningScreen(),
