@@ -17,34 +17,46 @@ class _InputComponentState extends State<InputComponent> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-            controller: widget.inputModel.controller,
-            keyboardType: widget.inputModel.keyboardType,
-            obscureText: isShowPassword,
-            style: GoogleFonts.inter(
-                color: Constant().whiteColor,
-                fontWeight: FontWeight.w500,
-                fontSize: 14
-            ),
-            textAlignVertical: TextAlignVertical.center,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8)
-              ),
-              contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              prefixIcon: Icon(widget.inputModel.icon, color: Constant().grayColor,),
-              labelText: widget.inputModel.label,
-              hintStyle: GoogleFonts.inter(
-                color: Constant().grayColor,
-                fontWeight: FontWeight.w500,
-                fontSize: 14
-              ),
-              hintText: widget.inputModel.hint,
-              suffix: widget.inputModel.isPassword ? IconButton(onPressed: (){
-                setState(() {
-                  isShowPassword = !isShowPassword;
-                });
-              }, icon: isShowPassword ? Icon(Icons.visibility_off_outlined) : Icon(Icons.visibility_outlined)) : null
-            ),  
-);
+      controller: widget.inputModel.controller,
+      keyboardType: widget.inputModel.keyboardType,
+      obscureText: widget.inputModel.isPassword ? !isShowPassword : false,
+      style: GoogleFonts.inter(
+          color: Constant().whiteColor,
+          fontWeight: FontWeight.w500,
+          fontSize: 14),
+      textAlignVertical: TextAlignVertical.center,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: Constant().secondary,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: BorderSide(color: Constant().grayColor, width: 1.5),
+        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        prefixIcon: Icon(widget.inputModel.icon, color: Constant().grayColor),
+        labelText: widget.inputModel.label,
+        hintStyle: GoogleFonts.inter(
+            color: Constant().grayColor,
+            fontWeight: FontWeight.w500,
+            fontSize: 14),
+        hintText: widget.inputModel.hint,
+        suffixIcon: widget.inputModel.isPassword
+            ? IconButton(
+                onPressed: () {
+                  setState(() {
+                    isShowPassword = !isShowPassword;
+                  });
+                },
+                icon: Icon(isShowPassword
+                    ? Icons.visibility_outlined
+                    : Icons.visibility_off_outlined),
+              )
+            : null,
+      ),
+    );
   }
 }

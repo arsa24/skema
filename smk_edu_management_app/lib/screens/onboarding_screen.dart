@@ -19,16 +19,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<Widget> _content = [
     CustomOnboarding(
-      title: "Lorem sipadsdak sadakd",
-      desc: "Reloaded 1 of 1115 libraries in 639ms",
+      title: "Pantau Semua Tugas",
+      desc: "Pantau tugas: cek status terkumpul & belum di satu tempat.",
+      img: "assets/images/pantau_semua_tugas.png",
     ),
     CustomOnboarding(
-      desc: "lorem ipsum",
-      title: "compile: 43 ms, reload: 240 ms, reassemble: 143 ms",
+      title: "Kelola Semua Tugas dengan Mudah",
+      desc: "Pantau tugas: cek status terkumpul & belum di satu tempat.",
+      img: "assets/images/kelola_semua_tugas.png",
+
     ),
     CustomOnboarding(
-      title: "lorem reassemble compile: reload",
-      desc: "240 Reloaded ms, reassemble Reloaded",
+      title: "lorem reassemble compile",
+      desc: "240 Reloaded ms, reassemble Reloaded : reload",
+      img: "assets/images/pantau_semua_tugas.png",
+
     ),
   ];
 
@@ -60,7 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 width: _index == 0 ? 16 : 6,
                 height: 6,
                 decoration: BoxDecoration(
-                  color: _index == 0 ? Colors.white : Constant().grayColor,
+                  color: _index == 0 ? Constant().ternary : Constant().grayColor,
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),
@@ -70,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 width: _index == 1 ? 16 : 6,
                 height: 6,
                 decoration: BoxDecoration(
-                  color: _index == 1 ? Colors.white : Constant().grayColor,
+                  color: _index == 1 ? Constant().ternary : Constant().grayColor,
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),
@@ -80,7 +85,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 width: _index == 2 ? 16 : 6,
                 height: 6,
                 decoration: BoxDecoration(
-                  color: _index == 2 ? Colors.white : Constant().grayColor,
+                  color: _index == 2 ? Constant().ternary : Constant().grayColor,
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),

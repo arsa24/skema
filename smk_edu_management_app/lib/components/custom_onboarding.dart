@@ -4,9 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smk_edu_management_app/constant/constant.dart';
 
 class CustomOnboarding extends StatelessWidget {
-  const CustomOnboarding({super.key, required this.desc, required this.title});
+  const CustomOnboarding({super.key, required this.desc, required this.title, required this.img});
   final String title;
   final String desc;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomOnboarding extends StatelessWidget {
               color: Constant().secondary,
               borderRadius: BorderRadius.circular(24),
             ),
-            child: Image.asset("assets/images/orang.png"),
+            child: Image.asset(img),
           ),
           Gap(10),
           Container(

@@ -1,5 +1,5 @@
 <p align="center"><img src="assets/logo.png" width="150" height="150" /></p>
-<h1 align="center">SKEMA <br>SMK Edu Management APP</h1>
+<h1 align="center">SKEMA</h1>
 
 ## Screenshot
 <p align="center"><img src="assets/screenshot.png" /></p>

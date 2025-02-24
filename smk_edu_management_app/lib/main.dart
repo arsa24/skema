@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.interTextTheme(),
       ),
       darkTheme: ThemeData(
-        inputDecorationTheme: InputDecorationTheme(
-          fillColor: Constant().secondary,
-          filled: true,
-          focusColor: Constant().grayColor,
-          hoverColor: Constant().grayColor,
-        ),
+        // inputDecorationTheme: InputDecorationTheme(
+        //   fillColor: Constant().secondary,
+        //   filled: true,
+        //   focusColor: Constant().grayColor,
+        //   hoverColor: Constant().grayColor,
+        // ),
         textTheme: GoogleFonts.interTextTheme(),
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Constant().primary,

@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 24),
+                padding: EdgeInsets.symmetric(horizontal: 14),
                 child: Column(
                   children: [
                     Text(
@@ -55,6 +55,7 @@ class LoginScreen extends StatelessWidget {
                   hint: "Nomor Telepon",
                   icon: Icons.phone_outlined,
                   label: "Nomor Telepon",
+                  keyboardType: TextInputType.number
                 ),
               ),
               Gap(16),
