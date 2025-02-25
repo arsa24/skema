@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                     color: Constant().ternary,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                  padding: EdgeInsets.symmetric(vertical: 18),
                   alignment: Alignment.center,
                   child: Text(
                     textAlign: TextAlign.center,
@@ -122,7 +122,7 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     color: Constant().secondary,
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.symmetric(vertical: 18),
                   width: double.infinity,
                   child: Row(mainAxisAlignment: MainAxisAlignment.center,spacing: 8, children: [
                       SvgPicture(

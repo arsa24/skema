@@ -15,6 +15,7 @@ class NavbarComponent extends StatefulWidget {
 }
 
 class _NavbarComponentState extends State<NavbarComponent> {
+  late PageController _controller;
   int _index = 0;
   final List<Widget> _screens = <Widget>[
     HomeScreen(),
@@ -24,16 +25,31 @@ class _NavbarComponentState extends State<NavbarComponent> {
   ];
 
   @override
+  void initState() {
+    _controller = PageController(initialPage: _index);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(index: _index, children: _screens),
+      body: PageView(
+        controller: _controller,
+        children: _screens,
+        onPageChanged:
+            (value) => setState(() {
+              _index = value;
+            }),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _index,
         onTap: (v) {
-          setState(() {
-            _index = v;
-          });
+          _controller.animateToPage(
+            v,
+            duration: Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
         },
         selectedLabelStyle: GoogleFonts.inter(
           fontSize: 14,

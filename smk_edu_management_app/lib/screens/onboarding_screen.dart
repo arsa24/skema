@@ -30,9 +30,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
     ),
     CustomOnboarding(
-      title: "lorem reassemble compile",
-      desc: "240 Reloaded ms, reassemble Reloaded : reload",
-      img: "assets/images/pantau_semua_tugas.png",
+      title: "Ayo Kita Mulai!",
+      desc: "Selesaikan tugas dengan tepat waktu dan kerjakan berbagai materi dengan efektif",
+      img: "assets/images/ayo_mulai.png",
 
     ),
   ];

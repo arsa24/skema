@@ -1,4 +1,5 @@
 import 'package:flutter_svg/svg.dart';
+import 'package:smk_edu_management_app/components/navbar_component.dart';
 import "package:vector_graphics/vector_graphics.dart";
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -65,7 +66,7 @@ class RegisterScreen extends StatelessWidget {
                   hint: "Nomor Telepon",
                   icon: Icons.phone_outlined,
                   label: "Nomor Telepon",
-                  keyboardType: TextInputType.number
+                  keyboardType: TextInputType.number,
                 ),
               ),
               Gap(16),
@@ -81,21 +82,32 @@ class RegisterScreen extends StatelessWidget {
               Gap(24),
               Align(
                 alignment: Alignment.centerRight,
-                child: GestureDetector(child: Text("Lupa sandi?", style: GoogleFonts.inter(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                  color: Constant().grayColor
-                ),)),
+                child: GestureDetector(
+                  child: Text(
+                    "Lupa sandi?",
+                    style: GoogleFonts.inter(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Constant().grayColor,
+                    ),
+                  ),
+                ),
               ),
               Gap(24),
               GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => NavbarComponent()),
+                    (route) => false,
+                  );
+                },
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Constant().ternary,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                  padding: EdgeInsets.symmetric(vertical: 18),
                   alignment: Alignment.center,
                   child: Text(
                     textAlign: TextAlign.center,
@@ -132,20 +144,25 @@ class RegisterScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     color: Constant().secondary,
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.symmetric(vertical: 18),
                   width: double.infinity,
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center,spacing: 8, children: [
-                    SvgPicture(
-                        AssetBytesLoader("assets/vector/google.vec"),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    spacing: 8,
+                    children: [
+                      SvgPicture(AssetBytesLoader("assets/vector/google.vec")),
+                      Text(
+                        "Masuk dengan Google",
+                        style: GoogleFonts.inter(
+                          fontWeight: FontWeight.w600,
+                          color: Constant().grayColor,
+                        ),
                       ),
-                    Text("Masuk dengan Google", style: GoogleFonts.inter(
-                        fontWeight: FontWeight.w600,
-                        color: Constant().grayColor
-                      ),),
-                  ],)
+                    ],
+                  ),
                 ),
               ),
-              Gap(60)
+              Gap(60),
             ],
           ),
         ),
