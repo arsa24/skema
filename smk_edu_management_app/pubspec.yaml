@@ -1,7 +1,7 @@
 name: smk_edu_management_app
 description: "A new Flutter project."
 publish_to: "none"
-version: 0.1.0+1
+version: 0.2.0+1
 
 environment:
   sdk: ^3.7.0
@@ -17,6 +17,7 @@ dependencies:
   vector_graphics: ^1.1.18
   gap: ^3.0.1
   flutter_native_splash: ^2.4.5
+  go_router: ^14.8.0
 
 dev_dependencies:
   flutter_test:

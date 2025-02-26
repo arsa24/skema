@@ -16,7 +16,7 @@ class _HistoryListState extends State<HistoryList> {
       isSubmited: true,
       point: 100,
       subject: "Matematika",
-      title: "Aljabar linear",
+      title: "Menuliskan akngka satu sampai 10.000 dengan menggunakan pensil dan ditulis di kertas selembar",
       submitOn: "Submitted on 5 Feb 2025",
     ),
     HistoryModel(

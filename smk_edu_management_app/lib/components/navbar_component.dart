@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smk_edu_management_app/screens/home_screen.dart';
 import 'package:smk_edu_management_app/screens/learning_screen.dart';
@@ -17,11 +18,11 @@ class NavbarComponent extends StatefulWidget {
 class _NavbarComponentState extends State<NavbarComponent> {
   late PageController _controller;
   int _index = 0;
-  final List<Widget> _screens = <Widget>[
-    HomeScreen(),
-    TaskScreen(),
-    LearningScreen(),
-    ProfileScreen(),
+  final List<String> _routes = <String>[
+    "/home",
+    "/task",
+    "/learning",
+    "/profile",
   ];
 
   @override
@@ -35,11 +36,18 @@ class _NavbarComponentState extends State<NavbarComponent> {
     return Scaffold(
       body: PageView(
         controller: _controller,
-        children: _screens,
-        onPageChanged:
-            (value) => setState(() {
-              _index = value;
-            }),
+        children: [
+          HomeScreen(),
+          TaskScreen(),
+          LearningScreen(),
+          ProfileScreen(),
+        ],
+        onPageChanged: (value) {
+          setState(() {
+            _index = value;
+          });
+          context.go(_routes[value]);
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -63,42 +71,22 @@ class _NavbarComponentState extends State<NavbarComponent> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SvgPicture(
-              AssetBytesLoader("assets/vector/house.vec"),
-              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
-            ),
-            label: "Home",
-            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/house.vec")),
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture(
-              AssetBytesLoader("assets/vector/check.vec"),
-              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
-            ),
-            label: "Task",
-            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/check.vec")),
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture(
-              AssetBytesLoader("assets/vector/learning.vec"),
-              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
-            ),
-            label: "Learning",
-            activeIcon: SvgPicture(
-              AssetBytesLoader("assets/vector/learning.vec"),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture(
-              AssetBytesLoader("assets/vector/user.vec"),
-              colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
-            ),
-            label: "Profile",
-            activeIcon: SvgPicture(AssetBytesLoader("assets/vector/user.vec")),
-          ),
+          _navItem("assets/vector/house.vec", "Home"),
+          _navItem("assets/vector/check.vec", "Tasks"),
+          _navItem("assets/vector/learning.vec", "Learning"),
+          _navItem("assets/vector/user.vec", "Profile"),
         ],
       ),
     );
   }
 }
+
+BottomNavigationBarItem _navItem(String assetPath, String label) =>
+    BottomNavigationBarItem(
+      icon: SvgPicture(
+        AssetBytesLoader(assetPath),
+        colorFilter: ColorFilter.mode(Color(0xFF585F67), BlendMode.srcIn),
+      ),
+      label: label,
+      activeIcon: SvgPicture(AssetBytesLoader(assetPath)),
+    );

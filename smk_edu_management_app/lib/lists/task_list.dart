@@ -13,7 +13,12 @@ class TaskList extends StatefulWidget {
 class _TaskListState extends State<TaskList> {
   final List<TaskModel> _task = [
     TaskModel(isFinished: true, from: "Erisa", title: "Aljabar linear"),
-    TaskModel(isFinished: false, from: "Hoshino", title: "Jumpshot"),
+    TaskModel(
+      isFinished: false,
+      from: "Asep",
+      title:
+          "Menuliskan akngka satu sampai 10.000 dengan menggunakan pensil dan ditulis di kertas selembar",
+    ),
     TaskModel(isFinished: false, from: "Erisa", title: "Statistika"),
     TaskModel(isFinished: true, from: "Eko", title: "Dasar JawaSkrip"),
     TaskModel(isFinished: true, from: "Dicky", title: "Video pembelajaran"),

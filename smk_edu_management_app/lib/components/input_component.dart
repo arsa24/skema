@@ -53,7 +53,7 @@ class _InputComponentState extends State<InputComponent> {
                 },
                 icon: Icon(isShowPassword
                     ? Icons.visibility_outlined
-                    : Icons.visibility_off_outlined),
+                    : Icons.visibility_off_outlined, color: Constant().grayColor,),
               )
             : null,
       ),

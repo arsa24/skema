@@ -10,6 +10,7 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 156,
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Constant().secondary,
@@ -29,6 +30,9 @@ class TaskCard extends StatelessWidget {
           ),
           Text(
             taskModel.title,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
+            softWrap: true,
             style: GoogleFonts.inter(
               fontSize: 16,
               color: Constant().whiteColor,
@@ -44,11 +48,14 @@ class TaskCard extends StatelessWidget {
                 height: 16,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color:
-                      taskModel.isFinished
-                          ? Constant().greenColor
-                          : Constant().redColor,
-                  border: Border.all(width: 4, color: Constant().whiteColor),
+                  color: Constant().secondary,
+                  border: Border.all(
+                    width: 2,
+                    color:
+                        taskModel.isFinished
+                            ? Constant().greenColor
+                            : Constant().redColor,
+                  ),
                 ),
               ),
               Text(

@@ -18,7 +18,7 @@ class WelcomeScreen extends StatelessWidget {
             desc:
                 "Aplikasi Pengumpulan Tugas\nLebih Mudah, Cepat dan Terorganisir",
             title: "Selamat Datang\ndi Aplikasi Skema",
-            img: "assets/images/orang.png",
+            img: "assets/images/welcome.png",
           ),
           Gap(50),
           Padding(

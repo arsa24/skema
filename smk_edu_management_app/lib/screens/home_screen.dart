@@ -57,6 +57,12 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              padding: EdgeInsets.all(4),
+              margin: EdgeInsets.symmetric(horizontal: 24),
+              height: 136,
+              child: Image.asset("assets/images/banner-1.png"),
+            ),
+            Container(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 "Tugas",

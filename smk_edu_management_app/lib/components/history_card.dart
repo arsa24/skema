@@ -33,6 +33,8 @@ class HistoryCard extends StatelessWidget {
             children: [
               Text(
                 historyModel.title,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
                 style: GoogleFonts.inter(
                   fontWeight: FontWeight.w500,
                   fontSize: 14,
