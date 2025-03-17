@@ -1,16 +1,48 @@
-# smk_edu_management_app
+<h1 align="center">SMK EDU MANAGEMENT APP</h1>
 
-A new Flutter project.
+## Screenshoots
 
-## Getting Started
+<div align="center">
+<img src="./screenshots/1.jpg" width="30%"/>
+<img src="./screenshots/2.jpg" width="30%"/>
+<img src="./screenshots/3.jpg" width="30%"/>
+<img src="./screenshots/4.jpg" width="30%"/>
+<img src="./screenshots/5.jpg" width="30%"/>
+<img src="./screenshots/6.jpg" width="30%"/>
+</div>
 
-This project is a starting point for a Flutter application.
+## Fitur
 
-A few resources to get you started if this is your first Flutter project:
+|       Fitur        | Status |
+| :----------------: | :----: |
+| Mengirimkan tugas  |   ❌   |
+| Mengumpulkan tugas |   ❌   |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Teknologi yang Digunakan
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Frontend: [Flutter](https://flutter.dev/ "Flutter") (WIP)
+- Backend: [Node.js](https://nodejs.org) (WIP)
+- Database: [MySQL](https://dev.mysql.com/) (WIP)
+
+## Struktur projek
+
+## Instalasi
+
+1. Clone repository
+
+```sh
+git clone https://github.com/arsa24/skema.git
+```
+
+2. Install dependensi
+
+```sh
+cd skema/smk_edu_management_app
+flutter pub get
+```
+
+3. Jalankan projek
+
+```sh
+flutter run
+```
