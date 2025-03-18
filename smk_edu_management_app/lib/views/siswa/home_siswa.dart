@@ -1,5 +1,6 @@
 import "package:smk_edu_management_app/sections/home_history_siswa.dart";
 import "package:smk_edu_management_app/sections/home_task_siswa.dart";
+import 'package:smk_edu_management_app/widgets/notification_modal.dart';
 import "package:smk_edu_management_app/sections/reminder_carousel.dart";
 import 'package:flutter/material.dart';
 import "package:gap/gap.dart";
@@ -47,7 +48,13 @@ class _HomeSiswaState extends State<HomeSiswa> {
                           : Container(),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      backgroundColor: Constant.secondaryDark,
+                      context: context,
+                      builder: (context) => NotificationModal(),
+                    );
+                  },
                   icon: Icon(
                     Icons.notifications_outlined,
                     size: 28,

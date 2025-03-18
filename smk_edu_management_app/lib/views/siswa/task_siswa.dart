@@ -26,7 +26,7 @@ class TaskSiswa extends StatelessWidget {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide(
-                        color: Constant.grayColor,
+                        color: Constant.whiteColor,
                         width: 2,
                       )
                     ),
