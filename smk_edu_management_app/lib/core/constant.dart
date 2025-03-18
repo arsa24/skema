@@ -5,6 +5,7 @@ class Constant {
   static final Color primaryDark = const Color(0xff111B26);
   static final Color secondaryDark = const Color(0xff16202C);
   static final Color ternaryDark = const Color(0xff008AC9);
+  static final Color barButton = const Color(0xFF454545);
 
   // light
 

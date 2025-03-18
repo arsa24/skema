@@ -57,7 +57,7 @@ class _HomeTaskSiswaState extends State<HomeTaskSiswa> {
                 spacing: 12,
                 children: [
                   Text(
-                    "Tasks",
+                    "Tugas",
                     style: CustomStyle.fontStyle(weight: FontWeight.bold),
                   ),
                   Container(

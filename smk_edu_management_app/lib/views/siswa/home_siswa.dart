@@ -74,22 +74,7 @@ class _HomeSiswaState extends State<HomeSiswa> {
                 Gap(0),
                 SizedBox(height: 116, child: ReminderCarousel()),
                 HomeTaskSiswa(),
-                // SizedBox(
-                //   height: 120,
-                //   child: ListView.builder(
-                //     shrinkWrap: true,
-                //     scrollDirection: Axis.horizontal,
-                //     itemBuilder: (context, index) => Container(),
-                //   ),
-                // ),
-                HomeHistorySiswa()
-                // SizedBox(
-                //   child: ListView.builder(
-                //     shrinkWrap: true,
-                //     physics: const NeverScrollableScrollPhysics(),
-                //     itemBuilder: (context, index) => Container(),
-                //   ),
-                // ),
+                HomeHistorySiswa(),
               ],
             ),
           ),
